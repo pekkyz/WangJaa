@@ -1,0 +1,10 @@
+{
+  "name": "WangJaa - ระบบจองที่จอดรถ & แสดงสถานะว่างหรือจอง",
+  "description": "WangJaa (ว่างจ้า) ระบบสแกน QR Code จองที่จอดรถ แยกป้ายกำกับว่าง/จอง/จอด กำหนดเวลารถเข้าจอดได้เอง พร้อมระบบแจ้งเตือนและตัดสิทธิ์การจองทันทีหากเกินเวลา",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

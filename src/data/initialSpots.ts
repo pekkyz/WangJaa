@@ -1,0 +1,221 @@
+import { ParkingSpot } from '../types';
+
+export const INITIAL_PARKING_SPOTS: ParkingSpot[] = [
+  // Zone A - Standard & Front Entrance (8 spots)
+  {
+    id: 'A-01',
+    zone: 'A',
+    spotNumber: 'A-01',
+    type: 'standard',
+    status: 'parked',
+    occupiedBy: {
+      plateNumber: '3กข 4821',
+      entryTime: new Date(Date.now() - 1000 * 60 * 85).toISOString(),
+      parkedTime: new Date(Date.now() - 1000 * 60 * 80).toISOString(),
+      vehicleType: 'car',
+    },
+  },
+  {
+    id: 'A-02',
+    zone: 'A',
+    spotNumber: 'A-02',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'A-03',
+    zone: 'A',
+    spotNumber: 'A-03',
+    type: 'standard',
+    status: 'reserved',
+    occupiedBy: {
+      plateNumber: 'ขข 9811',
+      entryTime: new Date(Date.now() - 1000 * 60 * 10).toISOString(),
+      expectedArrivalTime: new Date(Date.now() + 1000 * 60 * 20).toISOString(), // 20 mins remaining
+      vehicleType: 'suv',
+    },
+  },
+  {
+    id: 'A-04',
+    zone: 'A',
+    spotNumber: 'A-04',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'A-05',
+    zone: 'A',
+    spotNumber: 'A-05',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'A-06',
+    zone: 'A',
+    spotNumber: 'A-06',
+    type: 'compact',
+    status: 'parked',
+    occupiedBy: {
+      plateNumber: '1กพ 2450',
+      entryTime: new Date(Date.now() - 1000 * 60 * 35).toISOString(),
+      parkedTime: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
+      vehicleType: 'car',
+    },
+  },
+  {
+    id: 'A-07',
+    zone: 'A',
+    spotNumber: 'A-07',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'A-08',
+    zone: 'A',
+    spotNumber: 'A-08',
+    type: 'standard',
+    status: 'available',
+  },
+
+  // Zone B - Mid Section (8 spots)
+  {
+    id: 'B-01',
+    zone: 'B',
+    spotNumber: 'B-01',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'B-02',
+    zone: 'B',
+    spotNumber: 'B-02',
+    type: 'standard',
+    status: 'parked',
+    occupiedBy: {
+      plateNumber: '7กศ 8109',
+      entryTime: new Date(Date.now() - 1000 * 60 * 140).toISOString(),
+      parkedTime: new Date(Date.now() - 1000 * 60 * 135).toISOString(),
+      vehicleType: 'suv',
+    },
+  },
+  {
+    id: 'B-03',
+    zone: 'B',
+    spotNumber: 'B-03',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'B-04',
+    zone: 'B',
+    spotNumber: 'B-04',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'B-05',
+    zone: 'B',
+    spotNumber: 'B-05',
+    type: 'compact',
+    status: 'available',
+  },
+  {
+    id: 'B-06',
+    zone: 'B',
+    spotNumber: 'B-06',
+    type: 'compact',
+    status: 'reserved',
+    occupiedBy: {
+      plateNumber: '4ขม 6023',
+      entryTime: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+      expectedArrivalTime: new Date(Date.now() + 1000 * 60 * 15).toISOString(),
+      vehicleType: 'car',
+    },
+  },
+  {
+    id: 'B-07',
+    zone: 'B',
+    spotNumber: 'B-07',
+    type: 'standard',
+    status: 'available',
+  },
+  {
+    id: 'B-08',
+    zone: 'B',
+    spotNumber: 'B-08',
+    type: 'standard',
+    status: 'available',
+  },
+
+  // Zone EV - Electric Vehicle Charging Hub (4 spots)
+  {
+    id: 'EV-01',
+    zone: 'EV',
+    spotNumber: 'EV-01',
+    type: 'ev',
+    status: 'parked',
+    occupiedBy: {
+      plateNumber: '5กฮ 7799',
+      entryTime: new Date(Date.now() - 1000 * 60 * 50).toISOString(),
+      parkedTime: new Date(Date.now() - 1000 * 60 * 45).toISOString(),
+      vehicleType: 'ev',
+    },
+  },
+  {
+    id: 'EV-02',
+    zone: 'EV',
+    spotNumber: 'EV-02',
+    type: 'ev',
+    status: 'available',
+  },
+  {
+    id: 'EV-03',
+    zone: 'EV',
+    spotNumber: 'EV-03',
+    type: 'ev',
+    status: 'available',
+  },
+  {
+    id: 'EV-04',
+    zone: 'EV',
+    spotNumber: 'EV-04',
+    type: 'ev',
+    status: 'available',
+  },
+
+  // Zone P - Priority & Accessible (4 spots)
+  {
+    id: 'P-01',
+    zone: 'P',
+    spotNumber: 'P-01',
+    type: 'disabled',
+    status: 'available',
+  },
+  {
+    id: 'P-02',
+    zone: 'P',
+    spotNumber: 'P-02',
+    type: 'disabled',
+    status: 'available',
+  },
+  {
+    id: 'P-03',
+    zone: 'P',
+    spotNumber: 'P-03',
+    type: 'vip',
+    status: 'parked',
+    occupiedBy: {
+      plateNumber: '9กก 9999',
+      entryTime: new Date(Date.now() - 1000 * 60 * 210).toISOString(),
+      parkedTime: new Date(Date.now() - 1000 * 60 * 200).toISOString(),
+      vehicleType: 'car',
+    },
+  },
+  {
+    id: 'P-04',
+    zone: 'P',
+    spotNumber: 'P-04',
+    type: 'vip',
+    status: 'available',
+  },
+];
